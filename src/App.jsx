@@ -10,6 +10,7 @@ export const App = () => {
 
   const [num, setNum] = useState(1980);
   const [faceShowFlag, setFaceShowFlag] = useState(true);
+  const [result, setResult] = useState(1);
 
   const onClick = () => {
     alert("警告です");
@@ -65,9 +66,21 @@ export const App = () => {
   const changeFace = () => {
     setFaceShowFlag(!faceShowFlag);
   };
+  const goButton = {
+    color: "pink",
+    backgroundColor: "blue"
+  };
+
+  const toshiakiButton = () => {
+    setResult(result + 1);
+  };
 
   return (
     <>
+      <h1 style={{ color: "red", border: "3px solid #999" }}>{result}</h1>
+      <button style={goButton} onClick={toshiakiButton}>
+        変化するボタン
+      </button>
       <p>{num}</p>
 
       {faceShowFlag && <p>( ◠‿◠ )</p>}
