@@ -3,11 +3,10 @@ import React, { useState } from "react";
 import ColorfullMessage from "./components/ColorfullMessage";
 import My from "./components/My";
 import Test from "./components/Test";
+import { newTest } from "./components/newTest";
 import A from "./components/A";
 
 export const App = () => {
-  console.log("最初");
-
   const [num, setNum] = useState(1980);
   const [faceShowFlag, setFaceShowFlag] = useState(true);
   const [result, setResult] = useState(1);
@@ -77,6 +76,7 @@ export const App = () => {
 
   return (
     <>
+      <newTest>礼子</newTest>
       <h1 style={{ color: "red", border: "3px solid #999" }}>{result}</h1>
       <button style={goButton} onClick={toshiakiButton}>
         変化するボタン
